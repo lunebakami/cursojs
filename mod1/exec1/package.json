@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "babel ./main.js -o bundle.js -w"
+  },
   "dependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0"
-  },
-  "scripts": {
-    "dev": "babel ./main.js -o bundle.js -w"
   }
 }
