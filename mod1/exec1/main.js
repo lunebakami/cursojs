@@ -1,27 +1,58 @@
-class User{
-    constructor(email,senha){
-        this.email = email;
-        this.senha = senha;
-        this.admin = false;
-    }
+// 3.1
+const arr = [1, 2, 3, 4, 5];
+const ten = arr.map(function(item) {
+ return item + 10;
+});
 
-    isAdmin(){
-        return this.admin;
-    }
+console.log(ten);
+
+const twenty = arr.map(item => item + 10);
+
+console.log(twenty);
+
+// 3.2
+// Dica: Utilize uma constante pra function
+const usuario = { nome: 'Diego', idade: 23 };
+function mostraIdade(usuario) {
+ return usuario.idade;
 }
 
-class Admin extends User{
-    constructor(){
-        super();
-        this.admin = true;
-    }
+console.log(mostraIdade(usuario));
 
-    isAdmin(){
-        return this.admin;
-    }
+const age = (usuario) => (usuario.idade);
+
+console.log(age(usuario));
+
+// 3.3
+// Dica: Utilize uma constante pra function
+const nome = "Diego";
+const idade = 23;
+function mostraUsuario(nome = 'Diego', idade = 18) {
+ return { nome, idade };
 }
 
-const User1 = new User('email@teste.com', 'senha123');
-const Adm1 = new Admin('email@teste.com', 'senha123');
-console.log(User1.isAdmin()) // false
-console.log(Adm1.isAdmin()) // true
+
+console.log(mostraUsuario(nome, idade));
+
+console.log(mostraUsuario(nome));
+
+const user = (nome = 'Diego',idade = 18) => ({nome, idade});
+
+console.log(user(nome,idade));
+console.log(user(nome));
+
+
+
+// 3.4
+const promise = function() {
+    return new Promise(function(resolve, reject) {
+        return resolve();
+    })
+}
+
+console.log(promise());
+
+const promise2 = new Promise = (resolve, reject) => resolve();
+
+console.log(promise2());
+
