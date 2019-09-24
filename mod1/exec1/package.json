@@ -4,11 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "babel ./main.js -o bundle.js -w"
+    "dev": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=production"
   },
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2"
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   }
 }
